@@ -1,0 +1,20 @@
+<div class="leftPane">
+    <div class="logo">
+        <img src="assets/images/Canal_logo.png" alt="logo">
+    </div>
+    <div class="userDetails">
+        <div class="userImage">
+            <img src="assets/images/avatar_l.png" alt="userImage">
+        </div>
+        <div class="userName">
+            <!-- <span>{{userName}}</span> -->
+            <span class="name">{{userData.name}}</span>
+            <span class="designation">{{userData.designation}}</span>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li [ngClass]="{'active': i === selectedValue}" *ngFor="let item of menu; let i=index" (click)="makeItActive(i)">{{item}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="dashboardContainer">
+    <div class="topbar row">
+        <div class="greeting col-10">
+            <span>Good Morning {{userData.name}}</span>
+        </div>
+        <div class="utilities col-2">
+            <img src="assets/images/mail.png" alt="">
+            <img src="assets/images/notification-outline.png" alt="">
+        </div>
+    </div>
+    <div class="orderBookDataContainer col-9">
+        <div class="chartsContainer row">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="tableHeading row">
+            <div class="col-7">OrderBook</div>
+            <div class="col-5 button">
+                <input type="text" [(ngModel)]='filteredText'>
+            </div>
+        </div>
+        <div class="tableContainer">
+            <ul>
+                <li class="header">
+                    <span>ID</span>
+                    <span>First Name</span>
+                    <span>Last Name</span>
+                    <span>Email</span>
+                    <span>Gender</span>
+                    <span>IP Address</span>
+                </li>
+                <li *ngFor="let rowdata of tableData | search: filteredText">
+                    <span>{{rowdata.id}}</span>
+                    <span>{{rowdata.first_name}}</span>
+                    <span>{{rowdata.last_name}}</span>
+                    <span>{{rowdata.email}}</span>
+                    <span [appGenderFilterColor]="rowdata.gender">{{rowdata.gender}}</span>
+                    <span>{{rowdata.ip_address}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

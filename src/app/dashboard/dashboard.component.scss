@@ -1,0 +1,49 @@
+.dashboardContainer {
+    padding: 20px;
+    .topbar {
+        .greeting {
+            font-size: 2em;
+        }
+        .utilities {
+            text-align: right;
+            img {
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .orderBookDataContainer {
+        margin-top: 20px;
+        .chartsContainer {
+            div {
+                height: 200px;
+                box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.2);
+                margin-right: 20px;
+                flex: 0 0 31%;
+            }
+        }
+        .tableHeading {
+            margin-top: 20px;
+            .button {
+                text-align: right;
+                padding-right: 10px;
+            }
+        }
+        .tableContainer {
+            ul {
+                display: table;
+                border-collapse: collapse;
+                li {
+                    &.header {
+                        font-weight: bold;
+                    }
+                    display: table-row;
+                    border-bottom: 1px solid #3F3F3F;
+                    span {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+    }
+}
